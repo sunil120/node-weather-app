@@ -46,7 +46,6 @@ app.get('/weather',(req , res) => {
 				error: error
 			})
 		}
-		console.log(location);
 		forcast(location, (error, { forcast } = {}) => {
 			if(error) {
 				return res.send({
@@ -73,3 +72,9 @@ app.get('*', (req, res) => {
 app.listen('3000' , ()=> {
 	console.log('Server is up and running')
 })
+
+
+/*
+eval "$(ssh-agent -s)" - Check existing ssh key is running 
+ssh-add  ~/.ssh/id_rsa.ppk - add ssh identiry into the project
+*/
